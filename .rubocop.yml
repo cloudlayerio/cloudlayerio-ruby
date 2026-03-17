@@ -1,0 +1,25 @@
+plugins:
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+  SuggestExtensions: false
+
+Style/Documentation:
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/ModuleLength:
+  Exclude:
+    - "spec/**/*"

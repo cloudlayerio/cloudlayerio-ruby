@@ -1,0 +1,13 @@
+*.gem
+Gemfile.lock
+pkg/
+.bundle/
+coverage/
+doc/
+.yardoc/
+tmp/
+.env
+.idea/
+*.iml
+.vscode/
+.rspec_status
