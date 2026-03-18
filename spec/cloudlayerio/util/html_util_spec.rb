@@ -7,7 +7,7 @@ RSpec.describe CloudLayerio::Util::HtmlUtil do
     end
 
     it 'uses strict encoding (no newlines)' do
-      long_html = '<html><body>' + ('x' * 200) + '</body></html>'
+      long_html = "<html><body>#{'x' * 200}</body></html>"
       encoded = described_class.encode_html(long_html)
       expect(encoded).not_to include("\n")
     end
