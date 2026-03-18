@@ -41,3 +41,34 @@ Naming/AccessorMethodName:
 Naming/PredicateMethod:
   Exclude:
     - "lib/cloudlayerio/api/**/*"
+
+# RuboCop-RSpec cops: relax for integration-style specs with multiple
+# assertions per example (testing request/response pairs requires >1 expect)
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MultipleExpectations:
+  Max: 8
+
+# cloudlayerio uses lowercase gem name, not cloud_layerio (namespaced separately)
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
+# Allow {..} blocks for multi-line stubs in specs
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*"
+
+# Layout cops: allow chained stub_request calls without strict alignment
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/ParameterAlignment:
+  Exclude:
+    - "spec/**/*"
+
+# Allow /regexp/ in specs (easier to read than %r{})
+Style/RegexpLiteral:
+  Exclude:
+    - "spec/**/*"
