@@ -48,7 +48,7 @@ RSpec/ExampleLength:
   Max: 20
 
 RSpec/MultipleExpectations:
-  Max: 8
+  Max: 12
 
 # cloudlayerio uses lowercase gem name, not cloud_layerio (namespaced separately)
 RSpec/SpecFilePathFormat:
@@ -59,7 +59,17 @@ Style/BlockDelimiters:
   Exclude:
     - "spec/**/*"
 
-# Layout cops: allow chained stub_request calls without strict alignment
+# Allow /regexp/ in specs (easier to read than %r{})
+Style/RegexpLiteral:
+  Exclude:
+    - "spec/**/*"
+
+# Specs use string descriptions for behavior groups, not class names
+RSpec/DescribeClass:
+  Enabled: false
+
+# Disable strict Layout enforcement for specs — stub_request chains and
+# hash/array literals in specs don't benefit from alignment pedantry
 Layout/MultilineMethodCallIndentation:
   Exclude:
     - "spec/**/*"
@@ -68,7 +78,28 @@ Layout/ParameterAlignment:
   Exclude:
     - "spec/**/*"
 
-# Allow /regexp/ in specs (easier to read than %r{})
-Style/RegexpLiteral:
+Layout/ArgumentAlignment:
   Exclude:
     - "spec/**/*"
+
+Layout/FirstArrayElementIndentation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/FirstHashElementIndentation:
+  Exclude:
+    - "spec/**/*"
+
+Layout/HashAlignment:
+  Exclude:
+    - "spec/**/*"
+
+Layout/LineLength:
+  Max: 160
+  Exclude:
+    - "spec/**/*"
+
+# retry_policy_spec stubs rand on the policy instance to control jitter
+RSpec/SubjectStub:
+  Exclude:
+    - "spec/cloudlayerio/http/retry_policy_spec.rb"
