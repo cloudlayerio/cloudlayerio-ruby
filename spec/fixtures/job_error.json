@@ -1,0 +1,7 @@
+{
+  "id": "job-err-1",
+  "status": "error",
+  "timestamp": 1710000000000,
+  "error": "Navigation timeout exceeded: 30000ms",
+  "self": "https://api.cloudlayer.io/v2/jobs/job-err-1"
+}

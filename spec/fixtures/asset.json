@@ -1,0 +1,15 @@
+{
+  "id": "asset-123",
+  "uid": null,
+  "fileId": null,
+  "type": "pdf",
+  "ext": ".pdf",
+  "previewExt": ".png",
+  "url": "https://cdn.cloudlayer.io/assets/asset-123.pdf",
+  "previewUrl": "https://cdn.cloudlayer.io/previews/asset-123.png",
+  "size": 25000,
+  "timestamp": 1710000000000,
+  "projectId": "proj-1",
+  "jobId": "job-abc-123",
+  "name": "my-document"
+}

@@ -17,9 +17,27 @@ Metrics/BlockLength:
     - "spec/**/*"
 
 Metrics/MethodLength:
+  Max: 15
+  CountAsOne:
+    - hash
+    - heredoc
   Exclude:
     - "spec/**/*"
 
 Metrics/ModuleLength:
+  Max: 110
   Exclude:
     - "spec/**/*"
+
+Metrics/ClassLength:
+  Exclude:
+    - "lib/cloudlayerio/http/transport.rb"
+
+# API method names match the CloudLayer SDK convention across all languages
+Naming/AccessorMethodName:
+  Exclude:
+    - "lib/cloudlayerio/api/**/*"
+
+Naming/PredicateMethod:
+  Exclude:
+    - "lib/cloudlayerio/api/**/*"

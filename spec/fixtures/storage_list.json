@@ -1,0 +1,4 @@
+[
+  { "id": "stor-1", "title": "Production S3" },
+  { "id": "stor-2", "title": "Backup S3" }
+]

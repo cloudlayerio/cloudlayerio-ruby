@@ -1,0 +1,6 @@
+{
+  "id": "job-pending-1",
+  "status": "pending",
+  "timestamp": 1710000000000,
+  "self": "https://api.cloudlayer.io/v2/jobs/job-pending-1"
+}

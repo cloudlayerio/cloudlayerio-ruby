@@ -1,0 +1,18 @@
+[
+  {
+    "id": "tmpl-1",
+    "templateId": "invoice-basic",
+    "title": "Basic Invoice",
+    "category": "invoice",
+    "type": "pdf",
+    "tags": ["business"]
+  },
+  {
+    "id": "tmpl-2",
+    "templateId": "receipt-modern",
+    "title": "Modern Receipt",
+    "category": "receipt",
+    "type": "pdf",
+    "tags": ["business", "modern"]
+  }
+]

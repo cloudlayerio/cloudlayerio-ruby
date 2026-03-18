@@ -1,0 +1,17 @@
+{
+  "id": "tmpl-invoice-1",
+  "templateId": "invoice-basic",
+  "title": "Basic Invoice",
+  "shortDescription": "A clean, professional invoice template",
+  "searchKeywords": ["invoice", "billing", "payment"],
+  "tags": ["business", "finance"],
+  "category": "invoice",
+  "type": "pdf",
+  "previewUrl": "https://cdn.cloudlayer.io/templates/previews/tmpl-invoice-1.png",
+  "exampleAssetUrl": "https://cdn.cloudlayer.io/templates/examples/tmpl-invoice-1.pdf",
+  "highlights": ["Clean design", "Fully customizable", "Professional layout"],
+  "timestamp": { "_seconds": 1710000, "_nanoseconds": 0 },
+  "projectId": "proj-templates",
+  "sampleData": { "company": "Acme Corp", "invoiceNumber": "INV-001" },
+  "authorName": "CloudLayer"
+}

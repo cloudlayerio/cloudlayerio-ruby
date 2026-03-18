@@ -1,0 +1,22 @@
+{
+  "id": "job-abc-123",
+  "uid": "user-1",
+  "name": "test-document",
+  "type": "html-pdf",
+  "status": "success",
+  "timestamp": 1710000000000,
+  "workerName": "worker-1",
+  "processTime": 1234,
+  "apiKeyUsed": "key-xxx",
+  "processTimeCost": 0.05,
+  "apiCreditCost": 1.0,
+  "bandwidthCost": 0.02,
+  "totalCost": 1.07,
+  "size": 50000,
+  "params": { "format": "a4", "printBackground": true },
+  "assetUrl": "https://cdn.cloudlayer.io/assets/job-abc-123.pdf",
+  "previewUrl": "https://cdn.cloudlayer.io/previews/job-abc-123.png",
+  "self": "https://api.cloudlayer.io/v2/jobs/job-abc-123",
+  "assetId": "asset-456",
+  "projectId": "proj-789"
+}
