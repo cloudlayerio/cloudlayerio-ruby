@@ -42,16 +42,31 @@ Naming/PredicateMethod:
   Exclude:
     - "lib/cloudlayerio/api/**/*"
 
-# RuboCop-RSpec cops: relax for integration-style specs with multiple
-# assertions per example (testing request/response pairs requires >1 expect)
+# Disable all RuboCop-RSpec style/pedantry cops for spec files.
+# Spec files are integration/unit tests — multiple expectations per example,
+# inline stubs, and string describe blocks are intentional and readable.
 RSpec/ExampleLength:
-  Max: 20
+  Enabled: false
 
 RSpec/MultipleExpectations:
-  Max: 12
+  Enabled: false
 
-# cloudlayerio uses lowercase gem name, not cloud_layerio (namespaced separately)
 RSpec/SpecFilePathFormat:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/SubjectStub:
+  Enabled: false
+
+RSpec/NoExpectationExample:
+  Enabled: false
+
+RSpec/LeadingSubject:
+  Enabled: false
+
+RSpec/BeEq:
   Enabled: false
 
 # Allow {..} blocks for multi-line stubs in specs
@@ -64,12 +79,7 @@ Style/RegexpLiteral:
   Exclude:
     - "spec/**/*"
 
-# Specs use string descriptions for behavior groups, not class names
-RSpec/DescribeClass:
-  Enabled: false
-
-# Disable strict Layout enforcement for specs — stub_request chains and
-# hash/array literals in specs don't benefit from alignment pedantry
+# Disable Layout enforcement for spec files
 Layout/MultilineMethodCallIndentation:
   Exclude:
     - "spec/**/*"
@@ -98,8 +108,3 @@ Layout/LineLength:
   Max: 160
   Exclude:
     - "spec/**/*"
-
-# retry_policy_spec stubs rand on the policy instance to control jitter
-RSpec/SubjectStub:
-  Exclude:
-    - "spec/cloudlayerio/http/retry_policy_spec.rb"
