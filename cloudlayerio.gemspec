@@ -22,7 +22,8 @@ Gem::Specification.new do |spec|
     'changelog_uri' => 'https://github.com/cloudlayerio/cloudlayerio-ruby/blob/main/CHANGELOG.md',
     'documentation_uri' => 'https://cloudlayer.io/docs/sdk-ruby',
     'bug_tracker_uri' => 'https://github.com/cloudlayerio/cloudlayerio-ruby/issues',
-    'rubygems_mfa_required' => 'true'
+    'rubygems_mfa_required' => 'true',
+    'allowed_push_host' => 'https://rubygems.org'
   }
 
   spec.files = Dir['lib/**/*', 'LICENSE', 'README.md', 'CHANGELOG.md']

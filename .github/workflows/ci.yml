@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: ['3.2', '3.3', '3.4']
+        include:
+          # Ruby 3.1 reached EOL March 2025 — keep in matrix for compatibility
+          # reporting but allow failures so EOL-only issues don't block PRs
+          - ruby-version: '3.1'
+            continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+
+      - name: Run tests
+        run: bundle exec rspec
+
+      - name: Run linter
+        run: bundle exec rubocop
+
+      - name: Generate YARD docs
+        run: bundle exec yard doc --no-stats 2>&1 | grep -v "^$" || true
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: matrix.ruby-version == '3.3'
+        with:
+          name: coverage
+          path: coverage/
+          retention-days: 7
